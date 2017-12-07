@@ -1,0 +1,34 @@
+<!-- index.html -->
+<!doctype html>
+<!-- ASSIGN OUR ANGULAR MODULE -->
+<html ng-app="moviesList">
+
+<head>
+  <!-- META -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flix</title>
+  
+  <!-- load bootstrap -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="homepage.css">
+  
+  <!-- load angular -->
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+  <script src="core.js"></script>
+</head>
+<!-- SET THE CONTROLLER AND GET ALL MOVIES -->
+
+<body ng-controller="mainController">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-3 text-center movie-container" ng-repeat="movie in movies">
+        <img ng-src="{{movie.imagePath}}" class="movie-poster">
+        <h3 class="movie-title">{{movie.movieName}}</h3>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
